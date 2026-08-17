@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mr_Laundry | Laundry & Dry Care Hyderabad</title>
+  <meta name="description" content="Mr_Laundry provides affordable wash, wash + iron, blanket and sofa cover cleaning with free pickup and delivery in Hyderabad." />
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--blue:#087cf0;--dark:#09233f;--light:#f3f9ff;--text:#25364a;--white:#fff}
+    body{font-family:Arial,Helvetica,sans-serif;color:var(--text);background:#fff;line-height:1.6}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{background:linear-gradient(135deg,#087cf0,#35b8ff);color:white;position:sticky;top:0;z-index:10;box-shadow:0 4px 18px #0002}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:26px;font-weight:900;letter-spacing:.5px}.logo span{color:#eaffff}
+    .navlinks{display:flex;gap:26px;font-weight:700}.navlinks a:hover{opacity:.8}
+    .menu{display:none;font-size:28px;cursor:pointer}
+    .hero{background:linear-gradient(135deg,#eaf7ff,#fff);padding:75px 0 65px}
+    .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:45px;align-items:center}
+    .badge{display:inline-block;background:#dff2ff;color:#087cf0;padding:7px 14px;border-radius:30px;font-weight:800;margin-bottom:15px}
+    h1{font-size:clamp(42px,6vw,68px);line-height:1.05;color:var(--dark);margin-bottom:20px}
+    h1 span{color:var(--blue)}
+    .hero p{font-size:19px;max-width:600px;margin-bottom:28px}
+    .buttons{display:flex;gap:13px;flex-wrap:wrap}
+    .btn{display:inline-block;padding:13px 21px;border-radius:10px;font-weight:800;border:2px solid var(--blue)}
+    .primary{background:var(--blue);color:white}.secondary{color:var(--blue);background:white}
+    .hero-card{background:white;border-radius:24px;padding:25px;box-shadow:0 15px 45px #087cf026}
+    .laundry-art{height:300px;border-radius:18px;background:linear-gradient(145deg,#bfeaff,#f7fcff);display:flex;align-items:center;justify-content:center;font-size:110px}
+    section{padding:70px 0}.section-title{text-align:center;margin-bottom:38px}
+    .section-title h2{font-size:38px;color:var(--dark);margin-bottom:7px}
+    .section-title p{color:#65768a}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:white;border:1px solid #e4edf5;border-radius:17px;padding:25px;box-shadow:0 8px 25px #09233f0c}
+    .icon{font-size:38px;margin-bottom:12px}.card h3{color:var(--dark);margin-bottom:7px}
+    .price-section{background:var(--light)}
+    .price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .price-card{background:white;border-radius:18px;padding:25px;text-align:center;border:1px solid #dbeaf7}
+    .price-card h3{color:var(--dark);font-size:20px}.price{font-size:32px;color:var(--blue);font-weight:900;margin:10px 0}
+    .tag{display:inline-block;background:#e8f6ff;color:#087cf0;padding:4px 10px;border-radius:20px;font-size:12px;font-weight:800}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.step{text-align:center;padding:25px}
+    .num{width:50px;height:50px;background:var(--blue);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 15px;font-size:22px;font-weight:900}
+    .cta{background:linear-gradient(135deg,#087cf0,#0a5fc0);color:white;text-align:center;border-radius:24px;padding:50px 20px}
+    .cta h2{font-size:38px;margin-bottom:10px}.cta p{margin-bottom:23px}
+    .cta .btn{border-color:white}.cta .primary{background:white;color:#087cf0}
+    .contact{display:grid;grid-template-columns:1fr 1fr;gap:25px;align-items:stretch}
+    .contact-card{background:#f7fbff;border-radius:18px;padding:28px}.contact-card h3{color:var(--dark);margin-bottom:12px}
+    .contact-item{padding:12px 0;border-bottom:1px solid #dde8f2}.contact-item:last-child{border:0}
+    footer{background:#071b31;color:#dbe9f7;padding:30px 0;text-align:center}
+    footer strong{color:white}
+    .float{position:fixed;right:20px;bottom:20px;background:#18b85a;color:white;padding:14px 18px;border-radius:50px;font-weight:900;box-shadow:0 8px 25px #0003;z-index:20}
+    @media(max-width:800px){
+      .navlinks{display:none}.menu{display:block}.hero-grid,.contact{grid-template-columns:1fr}.cards,.price-grid,.steps{grid-template-columns:1fr}
+      .hero{padding-top:48px}.laundry-art{height:230px;font-size:85px}section{padding:55px 0}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="logo" href="#home">Mr_<span>Laundry</span></a>
+      <div class="navlinks">
+        <a href="#services">Services</a><a href="#prices">Prices</a><a href="#how">How It Works</a><a href="#contact">Contact</a>
+      </div>
+      <div class="menu" onclick="toggleMenu()">☰</div>
+    </nav>
+    <div id="mobileMenu" style="display:none;padding:0 0 18px">
+      <a href="#services" onclick="toggleMenu()">Services</a> &nbsp; | &nbsp;
+      <a href="#prices" onclick="toggleMenu()">Prices</a> &nbsp; | &nbsp;
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </div>
+</header>
+
+<main id="home">
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="badge">🚚 FREE PICKUP & DELIVERY</div>
+        <h1>Fresh Clothes.<br><span>Happy You.</span></h1>
+        <p>Professional laundry and ironing service in Hyderabad. Easy booking, affordable prices and convenient pickup & delivery.</p>
+        <div class="buttons">
+          <a class="btn primary" href="tel:8019130958">📞 Call Now</a>
+          <a class="btn secondary" href="https://wa.me/918019130958?text=Hi%20Mr_Laundry%2C%20I%20want%20to%20book%20a%20laundry%20pickup." target="_blank">💬 WhatsApp</a>
+        </div>
+      </div>
+      <div class="hero-card"><div class="laundry-art">🧺👕✨</div></div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title"><h2>Our Services</h2><p>Clean, fresh and handled with care.</p></div>
+      <div class="cards">
+        <div class="card"><div class="icon">🫧</div><h3>Wash</h3><p>Quality washing for your everyday clothes.</p></div>
+        <div class="card"><div class="icon">👔</div><h3>Wash + Iron</h3><p>Get your clothes washed and neatly ironed.</p></div>
+        <div class="card"><div class="icon">🛏️</div><h3>Blanket Cleaning</h3><p>Careful cleaning for half and double-size blankets.</p></div>
+        <div class="card"><div class="icon">🛋️</div><h3>Sofa Covers</h3><p>Freshen up your sofa covers with professional cleaning.</p></div>
+        <div class="card"><div class="icon">🚚</div><h3>Pickup</h3><p>We collect your laundry from your location.</p></div>
+        <div class="card"><div class="icon">🏠</div><h3>Delivery</h3><p>Clean laundry delivered back to your doorstep.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="prices" class="price-section">
+    <div class="container">
+      <div class="section-title"><h2>Simple Pricing</h2><p>No complicated pricing. Just straightforward rates.</p></div>
+      <div class="price-grid">
+        <div class="price-card"><span class="tag">POPULAR</span><h3>Wash</h3><div class="price">₹60 <small>/ kg</small></div><p>Washing service</p></div>
+        <div class="price-card"><span class="tag">BEST VALUE</span><h3>Wash + Iron</h3><div class="price">₹80 <small>/ kg</small></div><p>Wash and ironing</p></div>
+        <div class="price-card"><h3>Half Blanket</h3><div class="price">₹100</div><p>Per blanket</p></div>
+        <div class="price-card"><h3>Double Size Blanket</h3><div class="price">₹220</div><p>Per blanket</p></div>
+        <div class="price-card"><h3>Sofa Cover</h3><div class="price">₹100</div><p>Per cover</p></div>
+        <div class="price-card"><h3>Pickup & Delivery</h3><div class="price">FREE</div><p>Convenient doorstep service</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="container">
+      <div class="section-title"><h2>How It Works</h2><p>Booking your laundry is easy.</p></div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><h3>Book</h3><p>Call or WhatsApp us with your pickup details.</p></div>
+        <div class="step"><div class="num">2</div><h3>We Pick Up</h3><p>Our pickup service collects your laundry.</p></div>
+        <div class="step"><div class="num">3</div><h3>Clean & Deliver</h3><p>We clean your items and deliver them back.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h2>Need Your Laundry Done?</h2>
+        <p>Book your free pickup today in Hyderabad.</p>
+        <a class="btn primary" href="https://wa.me/918019130958?text=Hi%20Mr_Laundry%2C%20I%20want%20to%20book%20a%20pickup." target="_blank">💬 Book on WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-title"><h2>Contact Mr_Laundry</h2><p>We're ready to take care of your laundry.</p></div>
+      <div class="contact">
+        <div class="contact-card">
+          <h3>📍 Service Area</h3>
+          <div class="contact-item"><strong>Location:</strong> Hyderabad</div>
+          <div class="contact-item"><strong>Pickup & Delivery:</strong> Free</div>
+          <div class="contact-item"><strong>Phone:</strong> <a href="tel:8019130958">8019130958</a></div>
+        </div>
+        <div class="contact-card">
+          <h3>📲 Quick Booking</h3>
+          <p style="margin-bottom:18px">Tap below to call or message us on WhatsApp.</p>
+          <div class="buttons">
+            <a class="btn primary" href="tel:8019130958">Call 8019130958</a>
+            <a class="btn secondary" href="https://wa.me/918019130958?text=Hi%20Mr_Laundry%2C%20I%20want%20to%20book%20a%20laundry%20pickup." target="_blank">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="float" href="https://wa.me/918019130958?text=Hi%20Mr_Laundry%2C%20I%20want%20to%20book%20a%20laundry%20pickup." target="_blank">💬 WhatsApp</a>
+
+<footer><div class="container"><strong>Mr_Laundry</strong> — Laundry made easy in Hyderabad.<br>© <span id="year"></span> Mr_Laundry. All rights reserved.</div></footer>
+
+<script>
+  function toggleMenu(){
+    const m=document.getElementById('mobileMenu');
+    m.style.display=m.style.display==='none'?'block':'none';
+  }
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
